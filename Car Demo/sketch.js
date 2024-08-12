@@ -5,15 +5,9 @@ let wheelJoint1, wheelJoint2;
 
 function setup() {
   createCanvas(800, 400);
-
-  // Create a world with gravity pointing downwards
   world = planck.World(planck.Vec2(0, -10));
-
-  // Create the ground
   let ground = world.createBody();
   ground.createFixture(planck.Edge(planck.Vec2(-40, 0), planck.Vec2(40, 0)), 0);
-
-  // Create car body
   carBody = world.createBody({
     type: 'dynamic',
     position: planck.Vec2(0, 4)
@@ -23,8 +17,6 @@ function setup() {
     friction: 0.3,
     restitution: 0.1
   });
-
-  // Create wheels
   leftWheel = world.createBody({
     type: 'dynamic',
     position: planck.Vec2(-1.5, 3.5)
@@ -45,7 +37,6 @@ function setup() {
     restitution: 0.1
   });
 
-  // Create wheel joints
   wheelJoint1 = world.createJoint(planck.WheelJoint({
     motorSpeed: 0,
     maxMotorTorque: 20,
@@ -65,23 +56,18 @@ function setup() {
 
 function draw() {
   background(220);
-
-  // Step the physics simulation
   world.step(1 / 60);
-
-  // Draw the ground
   stroke(0);
   strokeWeight(4);
   line(0, height - 50, width, height - 50);
 
-  // Draw car body
-  drawBox(carBody, 4, 1);
+    drawBox(carBody, 4, 1);
 
-  // Draw wheels
+
   drawCircle(leftWheel, 1);
   drawCircle(rightWheel, 1);
 
-  // Control the car
+ 
   if (keyIsDown(LEFT_ARROW)) {
     wheelJoint1.setMotorSpeed(-10);
     wheelJoint2.setMotorSpeed(-10);
@@ -98,7 +84,7 @@ function drawBox(body, w, h) {
   const pos = body.getPosition();
   const angle = body.getAngle();
   push();
-  translate(pos.x * 100, height - pos.y * 100 - 50); // Adjust for screen position
+  translate(pos.x * 100, height - pos.y * 100 - 50);
   rotate(-angle);
   rectMode(CENTER);
   fill(150);
@@ -109,7 +95,7 @@ function drawBox(body, w, h) {
 function drawCircle(body, r) {
   const pos = body.getPosition();
   push();
-  translate(pos.x * 100, height - pos.y * 100 - 50); // Adjust for screen position
+  translate(pos.x * 100, height - pos.y * 100 - 50); 
   fill(50);
   ellipse(0, 0, r * 100, r * 100);
   pop();
