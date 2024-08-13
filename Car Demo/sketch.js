@@ -8,15 +8,17 @@ function setup() {
   world = planck.World(planck.Vec2(0, -10));
   let ground = world.createBody();
   ground.createFixture(planck.Edge(planck.Vec2(-40, 0), planck.Vec2(40, 0)), 0);
+
   carBody = world.createBody({
     type: 'dynamic',
     position: planck.Vec2(0, 4)
   });
-  carBody.createFixture(planck.Box(2, 0.5), {
+  carBody.createFixture(planck.Box(2, 0.5), { 
     density: 1.0,
     friction: 0.3,
     restitution: 0.1
   });
+
   leftWheel = world.createBody({
     type: 'dynamic',
     position: planck.Vec2(-1.5, 3.5)
@@ -56,22 +58,22 @@ function setup() {
 
 function draw() {
   background(220);
+
   world.step(1 / 60);
+
   stroke(0);
   strokeWeight(4);
   line(0, height - 50, width, height - 50);
 
-    drawBox(carBody, 4, 1);
-
+  drawBox(carBody, 4, 1);
 
   drawCircle(leftWheel, 1);
   drawCircle(rightWheel, 1);
 
- 
-  if (keyIsDown(LEFT_ARROW)) {
+  if (keyIsDown(RIGHT_ARROW)) {
     wheelJoint1.setMotorSpeed(-10);
     wheelJoint2.setMotorSpeed(-10);
-  } else if (keyIsDown(RIGHT_ARROW)) {
+  } else if (keyIsDown(LEFT_ARROW)) {
     wheelJoint1.setMotorSpeed(10);
     wheelJoint2.setMotorSpeed(10);
   } else {
@@ -84,7 +86,7 @@ function drawBox(body, w, h) {
   const pos = body.getPosition();
   const angle = body.getAngle();
   push();
-  translate(pos.x * 100, height - pos.y * 100 - 50);
+  translate(pos.x * 100, height - pos.y * 100 - 50); 
   rotate(-angle);
   rectMode(CENTER);
   fill(150);
