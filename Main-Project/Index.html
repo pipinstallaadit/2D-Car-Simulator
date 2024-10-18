@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Evolution Simulation</title>
+
+    <!-- External Libraries -->
+    <!-- p5.js for canvas manipulation and visual rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+    <!-- Planck.js for physics simulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/planck-js/1.0.5/planck.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <div class="header">
+        <h1>2D Car Simulation Using Genetic Algorithm</h1>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar with Controls and Statistics -->
+        <div class="sidebar">
+            <!-- Simulation Parameters Form -->
+            <form id="parameters-form">
+                <!-- Number of Cars Input -->
+                <div class="form-group">
+                    <label for="numCars">Number of Cars Per Generation:</label>
+                    <input 
+                        type="number" 
+                        id="numCars" 
+                        name="numCars" 
+                        value="10" 
+                        min="1" 
+                        max="100" 
+                    />
+                </div>
+
+                <!-- Mutation Rate Input -->
+                <div class="form-group">
+                    <label for="mutationRate">Mutation Rate:</label>
+                    <input 
+                        type="number" 
+                        id="mutationRate" 
+                        name="mutationRate" 
+                        value="0.05" 
+                        step="0.01" 
+                        min="0" 
+                        max="1" 
+                    />
+                </div>
+
+                <!-- Maximum Generations Input -->
+                <div class="form-group">
+                    <label for="maxGenerations">Max Generations:</label>
+                    <input 
+                        type="number" 
+                        id="maxGenerations" 
+                        name="maxGenerations" 
+                        value="10" 
+                        min="1" 
+                        max="100" 
+                    />
+                </div>
+
+                <!-- Chassis Radius Input -->
+                <div class="form-group">
+                    <label for="chassisRadius">Chassis Radius:</label>
+                    <input 
+                        type="number" 
+                        id="chassisRadius" 
+                        name="chassisRadius" 
+                        value="10" 
+                        min="1" 
+                        max="100" 
+                    />
+                </div>
+                
+                <!-- Wheel Radius Input -->
+                <div class="form-group">
+                    <label for="wheelRadius">Wheel Radius:</label>
+                    <input 
+                        type="number" 
+                        id="wheelRadius" 
+                        name="wheelRadius" 
+                        value="10" 
+                        min="1" 
+                        max="100" 
+                    />
+                </div>
+                
+                <!-- Control Buttons -->
+                <div class="form-group">
+                    <button type="button" id="startButton">Start Simulation</button>
+                    <button id="pauseButton">Pause Simulation</button>
+                </div>
+            </form>
+
+            <!-- Statistics Display -->
+            <div id="statistics">
+                <!-- Generation Counter -->
+                <p>Current Generation: <span id="currentGeneration">0</span></p>
+                
+                <!-- Distance Metrics -->
+                <p>Best Car Distance: <span id="bestCarDistance">0</span></p>
+                <p>All Time Leading Car Distance: <span id="allTimeLeadingDistance">0</span></p>
+                
+                <!-- Car Parameters -->
+                <p>Leading Car Parameters: <span id="leadingCarParams"></span></p>
+                <p>Chassis Vertices: <span id="chassisVertices">0</span></p>
+                <p>Wheel sizes: <span id="wheelSizes">0</span></p>
+                <p>Chassis Radius: <span id="chassisRadius">0</span></p>
+                <p>Wheel Positioning: <span id="wheelPositioning">0</span></p>
+            </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div class="canvas-container">
+            <canvas id="canvas" width="800" height="400"></canvas>
+        </div>
+    </div>
+
+    <!-- Main Simulation Script -->
+    <script src="main.js"></script>
+
+    <!-- Event Handlers -->
+    <script>
+        // Start Button Event Handler
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Get user input values
+            let numCars = document.getElementById('numCars').value;
+            let mutationRate = document.getElementById('mutationRate').value;
+            let maxGenerations = document.getElementById('maxGenerations').value;
+
+            // Set global parameters
+            window.numCars = parseInt(numCars);
+            window.mutationRate = parseFloat(mutationRate);
+            window.maxGenerations = parseInt(maxGenerations);
+
+            // Initialize simulation
+            setup();
+        });
+    </script>
+
+    <!-- Module Scripts 
+    <script src="js/main.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/car.js"></script>
+    <script src="js/terrain.js"></script>
+    <script src="js/genetics.js"></script>
+    <script src="js/utils.js"></script>
+                         Module Scripts -->
+</body>
+</html>

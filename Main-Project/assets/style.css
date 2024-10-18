@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  margin: 20px 0;
+}
+.header:hover {
+  transform: scale(1.05);
+}
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  margin: 20px 0;
+}
+.header:hover {
+  transform: scale(1.05);
+}
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#statistics {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+#statistics p {
+  margin-bottom: 10px;
+}
+
+/* Statistics display styles */
+#statistics {
+  background-color: #eef; /* Light background for stats */
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+#statistics:hover {
+  background-color: #ddeeff; /* Change color on hover */
+}
+
+#statistics p {
+  margin: 5px 0; /* Space between stats */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+/* Button styles */
+#startButton {
+  background-color: #4e54c8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#startButton:hover {
+  background-color: #3b3e9a; /* Darken on hover */
+}
+.canvas-container {
+  flex: 1; /* This will make the canvas fill the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Center the canvas */
+canvas {
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
