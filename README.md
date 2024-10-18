@@ -90,19 +90,19 @@ Here's the organized file structure for the project:
 │   ├── Note.md             # Note regarding the filestructure
 |    
 ├── 📁 mini-projects        
-│   ├── 📁 mini-project-1
+│   ├── 📁 Genetic-Algorithm_1
 │   │   ├── src             # Source code for mini project 1
 │   │   ├── assets          # Assets specific to mini project 1
 │   │   ├── index.html      # Entry point for mini project 1
 │   │   └── README.md       # Documentation specific to mini project 1
 │   │
-│   ├── 📁 mini-project-2
+│   ├── 📁 Car-Model
 │   │   ├── src             # Source code for mini project 2
 │   │   ├── assets          # Assets specific to mini project 2
 │   │   ├── index.html      # Entry point for mini project 2
 │   │   └── README.md       # Documentation specific to mini project 2
 │   │
-│   └── 📁 mini-project-3
+│   └── 📁 Terrain-Generation
 │       ├── src             # Source code for mini project 3
 │       ├── assets          # Assets specific to mini project 3
 │       ├── index.html      # Entry point for mini project 3
