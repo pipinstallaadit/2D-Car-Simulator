@@ -22,7 +22,7 @@ Follow these steps to set up the project locally:
 1. **Clone the repository**:
    ```bash
    git clone [https://github.com/pipinstallaadit/2D-Car-Simulator.git]
-   cd Car-Evolution-Simulation
+   cd 2D-Car-Simulator.git
    ```
 
 2. **Open `index.html`** in your browser. The simulation will run directly as it's a client-side project. No additional dependencies are required!
