@@ -3,7 +3,7 @@
 
 Welcome to the **Car Evolution Simulation**! This project demonstrates how genetic algorithms evolve car designs over generations in a 2D terrain environment using JavaScript, HTML, and CSS. The simulation models a car's evolution based on its performance, adapting its shape, wheel size, and other features to maximize its travel distance over rugged terrain.
 
-![Car Evolution Simulation Banner](path/to/your/banner-image.png)
+<!-- ![Car Evolution Simulation Banner](path/to/your/banner-image.png) -->
 
 ## **🚀 Project Overview**
 
@@ -90,19 +90,19 @@ Here's the organized file structure for the project:
 │   ├── Note.md             # Note regarding the filestructure
 |    
 ├── 📁 mini-projects        
-│   ├── 📁 Genetic-Algorithm_1
+│   ├── 📁 mini-project-1
 │   │   ├── src             # Source code for mini project 1
 │   │   ├── assets          # Assets specific to mini project 1
 │   │   ├── index.html      # Entry point for mini project 1
 │   │   └── README.md       # Documentation specific to mini project 1
 │   │
-│   ├── 📁 Car-Model
+│   ├── 📁 mini-project-2
 │   │   ├── src             # Source code for mini project 2
 │   │   ├── assets          # Assets specific to mini project 2
 │   │   ├── index.html      # Entry point for mini project 2
 │   │   └── README.md       # Documentation specific to mini project 2
 │   │
-│   └── 📁 Terrain-Generation
+│   └── 📁 mini-project-3
 │       ├── src             # Source code for mini project 3
 │       ├── assets          # Assets specific to mini project 3
 │       ├── index.html      # Entry point for mini project 3
@@ -112,12 +112,12 @@ Here's the organized file structure for the project:
 
 ```
 
-**Screenshots**:
+<!-- **Screenshots**:
 1. **Simulation in Action**:
    ![Simulation Running](path/to/your/simulation-screenshot.png)
 
 2. **Control Panel**:
-   ![Control Panel](path/to/your/control-panel-screenshot.png)
+   ![Control Panel](path/to/your/control-panel-screenshot.png) -->
 
 ## **🔄 How the Genetic Algorithm Works**
 
@@ -147,5 +147,5 @@ Contributions are welcome! Feel free to open issues, submit pull requests, or su
 ---
 
 I hope you enjoy exploring the evolution of cars through genetic algorithms!
-
-![Footer Image](path/to/your/footer-image.png)
+<!-- 
+![Footer Image](path/to/your/footer-image.png) -->
