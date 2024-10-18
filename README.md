@@ -21,7 +21,7 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/Car-Evolution-Simulation.git
+   git clone [https://github.com/your-username/2D-Car-Simulator.git]
    cd Car-Evolution-Simulation
    ```
 
